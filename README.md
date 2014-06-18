@@ -4,7 +4,7 @@ Use "mvn clean install" to create a .jar file.  I have not tested the mvn jar ar
 Creating my own IntelliJ project, I used the following jars that I downloaded (starting) from:
 
 http://mvnrepository.com/artifact/com.netflix.glisten/glisten/0.3
-
+{{pre|
 -rw-r--r-- 1 ethomas ethomas   114916 Jun  9 23:42 aspectjrt-1.6.0.jar
 -rw-r--r-- 1 ethomas ethomas 11531774 Jun  9 22:42 aws-java-sdk-1.6.6.jar
 -rw-r--r-- 1 ethomas ethomas   326917 Jun  9 22:40 cglib-nodep-2.2.2.jar
@@ -28,7 +28,7 @@ http://mvnrepository.com/artifact/com.netflix.glisten/glisten/0.3
 -rw-r--r-- 1 ethomas ethomas   205357 Jun  9 23:43 spring-test-3.0.7.RELEASE.jar
 -rw-r--r-- 1 ethomas ethomas   179346 Jun  9 23:43 stax-1.2.0.jar
 -rw-r--r-- 1 ethomas ethomas    26514 Jun  9 23:44 stax-api-1.0.1.jar
-
+}}
 The two most important items here are the glisten-0.3.jar file and the aws-java-sdk-1.6.6.jar files.  The rest are either dependencies or transitive dependencies.  Basically I started including everything until it worked.  I also used groovy-2.2.1.
 
 Running test cases requires setting up Domains in SWF at the AWS SWF Console.  Look at Utils.java to set either BasicCredentials (requires putting in AWSSecretKey and AWSAccessKey variables) or EnvironmentVariableCredentialsProvider to set up environment variables (see http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/auth/EnvironmentVariableCredentialsProvider.html)
