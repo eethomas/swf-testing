@@ -41,9 +41,14 @@ http://maven.apache.org/pom.html
 Feel free to modify that file as necessary.
 
 There are 4 tests that run in this source code so far:
+
 1) TestAndPromise.  This has a simple activity that sleeps and prints a message, and tests the AndPromise concept by running a 'waitFor()' on an AndPromise of promises A and B.
+
+
 2) TestNested.  This generates the string "ABCDEFGHIJKLMNOPQRSTUVWXYZ" by using a series of promises, each which depends on the output of the previous one.
+
 3) TestNestedSettable.  This is the same test as TestNested except Settables are used with the .chain() method to set up the relationship between the various promises.
+
 4) TestTryCatck.  This is a test that does an integer division in the activity that uses as divide by 0 to trigger an error to test the glisten doTry/withCatch structure.
 
 
